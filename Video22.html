@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo selectors and designing </title>
+    <style>
+        .container{
+            border: 2px solid red;
+            background-color: rgb(194, 216, 150);
+            margin: auto;
+            width: 680px;
+            padding-left: 30px;
+        }
+        .btn{
+            background-color: rgb(245, 192, 245);
+            padding: 6px;
+            text-decoration: none;
+            cursor: pointer; /* to show hand when hover on button*/
+            border-radius: 0.5cm;
+        }
+
+        /* pseudo selector  */
+        a:hover{
+            color: black;
+            background-color: blanchedalmond;
+        }
+
+        a:visited{
+            color: brown;
+            background-color: cornsilk;
+        }
+
+        a:active{
+            color: darkblue;
+        }
+        .btn{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .btn:hover{
+            color: darkred;
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+    <div  class="container" id="cont1">
+        <h3>This is the heading </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eveniet non facere repudiandae id incidunt tempore repellendus? Modi quidem aperiam voluptates consequuntur accusamus rem! Ullam voluptates officiis ipsum excepturi voluptatem!</p>
+
+        <a href="#" class="btn">Read More</a>
+        <button class="btn">Contact Us</button>
+    </div>
+
+
+</body>
+</html>

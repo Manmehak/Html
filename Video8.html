@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <h2>This is Forms Tutorial</h2>
+        <!--action is endpoint where form data is submitted -->
+        <form action="backend.php">
+            <!--to add data we use input tag-->
+            Name = <input type="text"><br><br>  <!--This will add sace where we can add data as input.. here we use Name as a property whose input is taken -->
+            Rollno = <input type="number"><br>
+            <br>
+            <!-- div can also be used to shift to next line it takes the whole space of the line -->
+            <div>
+                Class = <input type="text">
+            </div>
+            <br>
+            <div>
+                Email = <input type="email" name="myEmail">  <!-- name attribute will tell the background that what is Email-->
+            </div>
+            <br>
+            <div>
+                Date = <input type="date" name="myDate">
+            </div>
+            <br>
+            <label for="checkbox">Are u Eligible</label>
+                <input type="checkbox" name="check" id ="checkbox">
+            <br>
+            <div>
+                Gender: Male = <input type="radio" name="myGender"> Female = <input type="radio" name="myGender">
+
+                <!--here both name are mygender so we will check on only one box if wehad different names then we would have clicked on both-->
+            </div>
+
+            <br>
+                Write About Yourself : <br> <textarea name="mytext" id="" cols="30" rows="10"></textarea>
+
+             <!--how we submit form -->
+             <div>
+                <input type="submit" value="Submit Now">
+            </div>
+            <br>
+
+
+            <!--label tag used for if we click on any attribute then it will be highlighted-->
+            <label for="name1">Name</label>
+            <div>
+                <input type="text" name="myName1" id="name1"> <!-- label will take the id of form element we want to highlight -->
+            </div>
+
+
+            <!--select is for giving options to chose -->
+            <label for="choose">Car: </label>
+            <select name="myCar" id="choose">
+                <option value="swift">Swift</option>
+                <option value="rollsRoyce" selected>RollsRoyce</option>
+                <option value="bently">Bently</option>
+
+                <!--selected is to show the default value as that value like here it is rollsroyce-->
+
+            </select>
+
+        </form>
+        
+
+    
+    </body>
+</html>

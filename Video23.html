@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Menu</title>
+    <style>
+        .navbar {
+            background-color: antiquewhite;
+            border-radius: 0.5cm;
+
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 10px;
+        }
+
+        .navbar li a:hover {
+            color: red;
+        }
+
+        .navbar div {
+            margin-left: 70px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 10px;
+        }
+
+        .navbar button {
+            border-radius: 0.5cm;
+            margin-top: 6px;
+        }
+
+        .search {
+            float: left;
+        }
+
+        .search input {
+            margin: 8px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 0.5cm;
+            height: 18px;
+            margin-top: 7px;
+        }
+
+        /* .search button {
+            width: 26px;
+            height: 24px;
+            float: right;
+            margin: 8px;
+            margin-right: 28px;
+            border-radius: 0.5cm;
+        } */
+
+
+        .search img {
+            width: 20px;
+            height: 20px;
+            float: right;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a> </li>
+                <li><a href="#">About</a> </li>
+                <li><a href="#">Services</a> </li>
+                <li><a href="#">Contact Us</a> </li>
+
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search This Website">
+                </div>
+
+                <button class="search">
+                    <img src="Photos/search.png" alt="">
+                </button>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

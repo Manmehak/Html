@@ -1,0 +1,93 @@
+span {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+.id1 {
+    text-decoration: none;
+    color: black;
+}
+
+#login {
+    width: 20px;
+    height: 20px;
+    padding-left: 970px;
+    border-radius: 2px;
+
+
+}
+
+#poster1 {
+    margin-top: 10px;
+    height: 480px;
+    width: 840px;
+    padding-left: 10px;
+    border-radius: 0.5cm;
+
+}
+
+#poster2 {
+    float: right;
+    margin-top: 10px;
+    width: 405px;
+    height: 480px;
+    border-radius: 0.5cm;
+    padding-right: 5px;
+}
+
+.section1 {
+    background-color: grey;
+    border-radius: 0.5cm;
+}
+#section2{
+    background-color: lightgrey; 
+    border-radius: 0.5cm;
+}
+#nav1{
+    height: 30px; 
+    background-color: white; 
+    text-align: initial; 
+    padding-left: -20px; 
+    padding-top: 9px; 
+    border-radius: 1cm; 
+    text-align: center; 
+    margin-top: -37px;
+}
+
+#span2{
+    margin-left: 50px; 
+    padding-top: 30px; 
+    padding-right: 15px; 
+    float: left; 
+    text-align: center; 
+    width: 300px; 
+    font-size: 40px;
+    font-weight: bold; 
+    margin-top: 30px; 
+    margin-right: 70px;
+    background-color: khaki; 
+    border-radius: 0.5cm;
+}
+#span3{
+    font-style: normal; 
+    text-align: center; 
+    font-size: 15px; 
+    font-style: italic; 
+    float: left;
+}
+#section3{
+    background-color: rgb(238, 229, 229); 
+    border-radius: 0.5cm;
+}
+
+#section4{
+    background-color: blue; 
+    border-radius: 0.5cm; 
+    height:200px;
+}
+.footer{
+    text-decoration: none;
+    color: white;
+
+}
