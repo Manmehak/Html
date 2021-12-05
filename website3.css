@@ -70,6 +70,7 @@ header {
     font-size: 14px;
     padding: 5px;
     border-radius: 7px;
+    cursor: pointer;
 }
 
 .right .btn2 {
@@ -77,6 +78,7 @@ header {
     padding: 4px;
     margin-left: 6px;
     border-radius: 7px;
+    cursor: pointer;
 }
 
 .btn1:hover,
@@ -122,6 +124,7 @@ nav a:hover {
     background-color: darkorange;
     border: 1px solid white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .container2 {
