@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+       
+        header {
+            margin: auto;
+
+            border: 2px solid red;
+            width: 50%;
+        }
+
+        img {
+            width: 34px;
+            display: block;
+            margin: auto;
+            /* display: block; This will make the img tag a block tag as img tag is a inline tag but this it will make it block */
+        }
+
+        h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+
+        .box {
+            border: 4px solid black;
+            background-color: rgb(226, 223, 223);
+            margin: -1px;
+            padding: 20px;
+            display: inline-block;
+            width: 33%;
+            box-sizing: border-box;   
+            /* Border box s used to maintain the same width as given otherwise it will add margin padding extra so it will chnage the width of the block  */
+            margin-top: 10px;
+        }
+        .container{
+            margin: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top">
+        <img src="Photos/price1.jpg" alt="">
+        <h3>Welcome to Html</h3>
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <h4>Heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestias ad quis harum, quaerat
+                delectus iusto cupiditate omnis dicta quae voluptates, eius quisquam illum modi?</p>
+        </div>
+        <div class="box">
+            <h4>Heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestias ad quis harum, quaerat
+                delectus iusto cupiditate omnis dicta quae voluptates, eius quisquam illum modi?</p>
+        </div>
+        <div class="box">
+            <h4>Heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, molestias ad quis harum, quaerat
+                delectus iusto cupiditate omnis dicta quae voluptates, eius quisquam illum modi?</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
