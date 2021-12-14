@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+    <style>
+
+        html{
+            font-size: 20px;
+        }
+        .container{
+            font-size: 10px;
+            height: 100vh;  
+            /* this will adjust the height acc to viewport means the height of showing screenn */
+            width: 100vw;
+            /* this will adjust the width of the container of the screen  */
+        }
+        h1{
+            text-align: center;
+            font-size: 10px;
+        }
+
+        #first{
+            font-size: 4em;  /* this will chnage the font size acc to tthe font size of container  as here container font size is 10 px so first box font size will be 10*10px =100 px*/
+            padding: 3em; /* padding is calculated acc to padding * font size of box * font size of conatiner */ 
+        }
+
+        #second{
+            font-size: 3rem;
+            padding: 3rem;
+
+            /*  rem is calculated as rem * fonr size of html font isze as here html font size is 25 
+            and same goes with padding  */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+   <h1 id="first">This is first heading</h1>
+   <h1 id="second">This is second heading </h1>
+   <h1 id="third">This is third heading</h1>
+</div>
+</body>
+</html>
