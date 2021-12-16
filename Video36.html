@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .container {
+            
+        }
+
+        .box {
+            background-color: khaki;
+            border: 2px solid red;
+            width: 20em;
+            height: 12em;
+            position: relative;
+            animation-name: Mehak1;
+            /*name could be anything*/
+            animation-duration: 1s;
+            animation-iteration-count: 2;
+            /*could be infinite*/
+            animation-fill-mode:forwards;/*tells where to end animation*/
+            /* animation-timing-function: ease-in-out; */
+            /*tells the speed in beg and end*/
+            /* animation-delay: 3s;tells when to start animation */
+            /* animation-direction: reverse; */
+            
+            /* animation shorthand */
+            /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode */
+        }
+
+        .box2 {
+            background-color: khaki;
+            border: 2px solid red;
+            width: 20em;
+            height: 12em;
+            position: relative;
+            animation-name: Mehak2;
+            animation-duration:4s;
+            animation-iteration-count: 2;
+            animation-direction: forwards; /*forward to go always in forward direction alternate means to once forward and and then backwards  */
+        }
+
+        /* to get animation to work */
+        @keyframes Mehak1 {
+            from {
+                width: 20em;
+            }
+
+            to {
+                width: 40em;
+            }
+        } 
+
+        /* 2nd way to get animation */
+        /* @keyframes Mehak2{
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+            50%{
+                top: 250px;
+                left: 250px;
+            }
+            75%{    
+                top: 0px;
+                left: 250px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is box
+        </div>
+        <div class="box2">
+            box2
+        </div>
+    </div>
+</body>
+
+</html>

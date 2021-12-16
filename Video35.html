@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables/CSS Properties</title>
+    <style>
+
+        /* to have global variable accessible by all boxes  */
+        :root{
+            --primary-color:black;
+        }
+        .container{
+            display: flex;
+            /* background-color: var(--box-color);we cannot access variable in another box we have to declareit in everywhere  */
+            justify-content: center;
+        }
+
+        .box{
+            width: 20em;
+            border: 2px solid red ;
+            height: 12em;
+            margin: 1em;
+            
+            /* create a variable by ussing --  */
+            --box-color:khaki;
+
+            background-color:var(--box-color); /*how we use variable */
+            box-shadow: 3px 3px var(--primary-color);
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>
