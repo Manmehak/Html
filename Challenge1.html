@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Responsiveness</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container1 {
+            width: 100%;
+            height: 10em;
+            border: 2px solid;
+            overflow: auto;
+            background-color: rgba(255, 166, 0, 0.438);
+        }
+
+        .container1 h3 {
+            font-size: 4em;
+            text-align: center;
+            padding-top: .7em;
+            
+        }
+
+        .container2 {
+            overflow: hidden;
+            margin-left: .5em;
+            margin-top: 1em;
+            /* border: 2px solid red; */
+        }
+
+        .container2 .box {
+            border: 2px solid white;
+            text-align: center;
+            height: 7em;
+            padding-top: 2em;
+            font-size: 4em;
+            float: left;
+            background-color: rgba(250, 144, 162, 0.336);
+        }
+
+        @media screen and (min-width:0px) and (max-width:600px) {
+            .box {
+                width: 100%;
+                height: 10em;
+            }
+        }
+
+        @media screen and (min-width:500px) and (max-width:1100px) {
+           .box{
+            width: 49%;
+            height: 10em;
+           }
+        }
+
+        @media screen and (min-width:1100px) {
+            .box{
+                width: 25%;
+                height: 10em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <h3>
+            Subjects
+        </h3>
+    </div>
+
+    <div class="container2">
+        <div class="box" id="item1">Physics</div>
+        <div class="box" id="item2">Maths</div>
+        <div class="box" id="item3">English</div>
+        <div class="box" id="item4">Chemistry</div>
+
+    </div>
+</body>
+
+</html>

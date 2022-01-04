@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions in JavaScript</title>
+</head>
+
+<body>
+
+
+    <script>
+        var str = "Manmehak"
+        console.log(str);
+        var pos = str.indexOf('h');
+        console.log(pos); //Shows first occurence of substring
+
+        pos=str.lastIndexOf('n');  // where lastly n occured which is 2
+        console.log(pos);
+
+        //Subtring from a string 
+        // we used slice 1st method  : slice can take -ve value in it 
+        var substr1 = str.slice(0,3); // start , end +1 
+        console.log(substr1);
+        // 2nd method Subtring
+        substr1 = str.substring(0,3); // cannot take negative value in it
+        console.log(substr1);
+
+        // 3rd substr
+        substr1 = str.substr(0,3);
+        console.log(substr1);
+
+        // Replace
+        var replaced = str.replace("Manmehak","Partap Singh");
+        console.log(str);
+        console.log(replaced);
+
+        // Upper & Lower
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        // Concatenate
+        var newS = replaced.concat(' Goraya');
+        console.log(newS);
+
+        // Trim the white space from start and end
+        var strWhiteSpaces = '       This is with    white spaces';
+        console.log(strWhiteSpaces);
+        console.log(strWhiteSpaces.trim());
+
+        // extract characters from string
+        var char = str.charAt(2);
+        console.log(char);
+        // CharCodeAt give the code of the character 
+        char = str.charCodeAt(2);
+        console.log(char);
+
+        console.log(str[3]);
+
+
+    </script>
+</body>
+
+</html>

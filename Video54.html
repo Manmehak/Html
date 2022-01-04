@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction using Alert , Prompt</title>
+</head>
+
+<body>
+    THis is a page
+    <script>
+        // Alert in JavaScript : displays message as a pop up on screen  
+        alert('This is a Message');  
+        // Alert does not return anything .. if we call it.. will give undefined as a value 
+        //Takes arguement as a String and unless this popup hasnot been closed u cannot do anything on the page and this is called modail
+
+        // Prompt : wanna ask user something 
+        let name = prompt("What is your name : ", "Guest");
+        // Prompt : contains two things  1. ques and 2. defalut arguement which will be prefilled in that space 
+        // Default arg is optional it will create an empty space with cursor in it . 
+        // and when we press ok with any name it will be stored in name variable 
+        console.log(name);
+
+        // Confirm : to give user a warning about something  or double check something 
+        let deletePost = confirm("Do You really want to Delete?");
+        console.log(deletePost);
+        // If we click yes it will return true and vice versa 
+
+        // To display on screen 
+        if(deletePost){
+            console.log("The post has been deleted!");
+        }
+        else{
+            console.log("Post hasn't been deleted..");
+        }
+
+
+        // Quick Quiz : Ask user its age  and then check if user is 18 plus then allowed otherwise not 
+        let age = prompt("Confirm Your Age?");
+        if(age>=18){
+            console.log("You are allowed to enter in Cloud..");
+        }
+        else{
+            console.log("You are under age to get into this cloud..");
+        }
+    </script>
+</body>
+
+</html>

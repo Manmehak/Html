@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating DOM</title>
+    <style>
+        p{
+            border: 2px solid red;
+            padding: 10px;
+            font-size: 25px;
+            display: inline-block;
+            background-color: khaki;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav" >
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact US</li>
+        </ul>
+    </div>
+    <div class="btn">
+        <p>This is Button</p>
+    </div>
+    <script>
+        let main = document.getElementById('main');
+        console.log(main);
+
+        //To change content inside html in javascript 
+         let nav = document.getElementById('nav');
+         console.log(nav);
+        //  nav.innerHTML= "Inner Html Changed"
+
+        let btn1= document.getElementsByClassName('btn');
+        console.log(btn1);
+        
+        //js using css and classes selector 
+        // usind id 
+        let nav1 = document.querySelector('#nav>li');
+        console.log(nav1);
+        // this will print only first li of the id 
+        // to print all we need to used queryselectorall
+
+        let nav2 = document.querySelectorAll('#nav>li');
+        console.log(nav2);
+
+        
+
+
+    </script>
+</body>
+</html>

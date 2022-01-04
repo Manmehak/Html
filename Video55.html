@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    This is a Webpage.. aBout Loops..
+    <script>
+        console.log("This is Tutorial 55.");
+
+        // for loop is used to iterate an array most of the times
+        for(let i=0;i<5;i++){
+            console.log(i);
+        }
+
+        //Example with array
+        let friends = ["Manmehak", "Pankaj" ,"Ashish" , "Rahul"];
+        for(let index=0;index<friends.length;index++){
+            console.log("Hello Friend " + friends[index]);
+        } 
+        
+        // For each loop
+        // syntax : arrayName.forEach(function functionName(variableName){ body });
+        let number = [1,2,3,4,5,6,7];
+        number.forEach(function f(element){
+            console.log(element)
+        });
+        
+        // For of loop 
+        for(element of friends){
+            console.log("Hello Friend " + element);
+        }
+
+        // to iterate an object
+        let employee = {
+            name : "Manmehak",
+            age : 20,
+            student : true,
+            salary : 100000,
+        }
+        // this can be accessed by for in loop
+        for(key in employee){
+            console.log(`The ${key} of employee is ${employee[key]}`);
+        }
+
+        // While Loop
+        let i=0;
+        while(i<4){
+            console.log(`${i} is less than 11`);
+            i++;
+        }
+
+        // Do while
+        let j=21;
+        do {
+            console.log(`${j} is less than 10`);
+            j++;
+        } while (j<4);
+
+    </script>
+</body>
+</html>

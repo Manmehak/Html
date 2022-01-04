@@ -1,0 +1,33 @@
+/* *{
+    background-color: black;
+} */
+
+#navbar{
+    display: block;
+}
+
+#logo img {
+    height: 35em;
+    width: 60em;
+    margin-left: 50em;
+    
+}
+
+#nav{
+    height: 40em;
+}
+
+#nav ul{
+    display: block;
+    margin: auto;
+}
+
+#nav ul li{
+    background-color: black;
+    text-align: center;
+    border: 2px solid white;
+}
+
+#nav>a{
+    color: white;
+}

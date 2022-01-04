@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Objects</title>
+</head>
+<body>
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, laboriosam quasi. Vel iure et veritatis maiores facilis consectetur vero, quisquam esse error est facere eius ea expedita officiis delectus earum!
+    </div>
+    <script>
+        let myVar = 34;
+        let myVar2 = "String";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;  // value can be undefined
+        // by default any value of any variable is undefined set by the sytem 
+
+        // Object 1st method 
+        let employee = {
+            name:"Manmehak",  // in object we use colon instead of equals to 
+            salary : 100000,
+            age : 20,
+            "live in" : "Qadian",
+        }
+        console.log(employee);
+        console.log(employee.age);
+        console.log(employee.salary);
+        console.log(employee.name);  //or 
+        console.log(employee['age']);
+        console.log(employee['live in']); //if key has spaces then can only be accessed by this
+    
+        // Array  1st method 
+        let names = [1,2,3,"Manmehak" , true , undefined];  //Any value can be added in this array 
+        console.log(names);
+        console.log(names[2]);
+
+
+        // 2nd method declaring array
+        let names1 = new Array( 2,41, 3, "Manmehak", undefined); //here array of object is created
+        console.log(names1.length);
+        // To sort array 
+        names1 = names1.sort();   // making 11 21 smaller than 2 and 3 dont know 
+        // To push in array
+        names1.push("Eve");
+        console.log(names1);
+
+        // If we want to make array of 23 elements 
+        let names2 = new Array(23);
+        console.log(names2);
+        
+
+
+
+    </script>
+</body>
+</html>

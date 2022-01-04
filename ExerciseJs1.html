@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply & Divide</title>
+    <style>
+        .container{
+            border: 1px solid gray;
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+        }
+
+        p{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <p class="box1">1st Number : </p>
+            <input id="input1" type="text" placeholder="Enter 1st Number">
+        </div>
+        <div>
+            <p class="box2">2nd Number : </p>
+            <input id="input2" type="text" placeholder="Enter 2nd Number">
+        </div>
+        <button id="btn1">Multiply</button>
+        <button id="btn2">Divide</button>
+    </div>
+    <div>
+        <p>The Result is : </p>
+        <span id="result"></span>
+    </div>
+    <script>
+        
+        
+        let btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click',function multiply(){
+            let number1 = document.getElementById('input1').value;
+            let number2 = document.getElementById('input2').value;
+            let multiply1= parseInt(number1)*parseInt(number2); 
+            let result = document.getElementById('result');
+            result.innerHTML = multiply1;
+        });
+        
+        
+        let btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click' , divide);
+        function divide(){
+            let number1 = document.getElementById('input1').value;
+            let number2 = document.getElementById('input2').value;
+            let divide1 = parseInt(number1)/parseInt(number2);
+            let result = document.getElementById('result');
+            result.innerHTML = divide1;
+        }
+        
+    </script>
+</body>
+</html>

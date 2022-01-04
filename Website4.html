@@ -21,6 +21,7 @@
             width: 127em;
             position: sticky;
             top: 0px;
+            z-index: 12;
             background-color: white;
 
 
@@ -191,7 +192,6 @@
         .container4 {
             width: 127em;
             height: 74em;
-            position: absolute;
             /* border: 2px solid red; */
             margin-top: 4em;
             background-color: rgba(205, 205, 236, 0.3);
@@ -246,6 +246,23 @@
             height: 45em;
             margin-left: 4em;
             margin-top: 3em;
+        }
+
+        .main1:hover {
+            animation-name: main1;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes main1 {
+            from {
+                margin-top: 6em;
+            }
+
+            to {
+                margin-top: 0em;
+            }
         }
 
         .main2 h3 {
@@ -326,9 +343,221 @@
         }
 
         .container5 {
+            /* border: 2px solid red; */
+            width: 127em;
+            height: 30em;
+            margin-top: 4em;
 
+        }
 
+        .container5 .box1,
+        .box2,
+        .box3 {
+            display: flex;
+        }
 
+        .container5 .box1 .boxes,
+        .box2 .boxes,
+        .box3 .boxes {
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid red; */
+            width: 52em;
+            height: 8em;
+            margin-left: 7em;
+            margin-top: 1em;
+
+        }
+
+        .container5 .head {
+            /* position: relative; */
+            height: 3em;
+            /* border: 2px solid black; */
+
+        }
+
+        .head h4 {
+            /* display: flex; */
+            font-size: 1.4em;
+            margin-top: 0.9em;
+            margin-left: 0.3em;
+            text-shadow: none;
+            color: black;
+        }
+
+        .head span {
+            font-size: .8em;
+            font-weight: 700;
+        }
+
+        #spanhead1 {
+            margin-left: 38em;
+        }
+
+        #spanhead2 {
+            margin-left: 39em;
+        }
+
+        #spanhead3 {
+            margin-left: 39em;
+        }
+
+        #spanhead4 {
+            margin-left: 34em;
+        }
+
+        #spanhead5 {
+            margin-left: 33.5em;
+        }
+
+        #spanhead6 {
+            margin-left: 33.5em;
+        }
+
+        .container5 .bottom .btm1 {
+            /* border: 2px solid red; */
+            margin-top: 1em;
+            height: 1.2em;
+            width: 50em;
+            margin-left: 0.6em;
+            background-color: rgb(216, 235, 241);
+        }
+
+        .bottom .btm2 {
+            /* border: 2px solid black ; */
+            height: 1.2em;
+            width: 50em;
+            margin-left: 0.6em;
+            margin-top: -1.2em;
+        }
+
+        #btm1a {
+            animation-name: btm1a;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        #btm1b {
+            animation-name: btm1b;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+
+        }
+
+        #btm1c {
+            animation-name: btm1c;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+
+        }
+
+        #btm1d {
+            animation-name: btm1d;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        #btm1e {
+            animation-name: btm1e;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        #btm1f {
+            animation-name: btm1f;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        :root {
+            --background-color: rgb(17, 17, 207);
+        }
+
+        @keyframes btm1a {
+            from {
+                width: 0em;
+            }
+
+            to {
+                width: 50em;
+                background-color: var(--background-color);
+            }
+
+        }
+
+        @keyframes btm1b {
+            from {
+                width: 0em;
+            }
+
+            to {
+                width: 45em;
+                background-color: var(--background-color);
+            }
+
+        }
+
+        @keyframes btm1c {
+            from {
+                width: 0em;
+            }
+
+            to {
+                width: 35em;
+                background-color: var(--background-color);
+            }
+
+        }
+
+        @keyframes btm1d {
+            from {
+                width: 0em;
+            }
+
+            to {
+                width: 35em;
+                background-color: var(--background-color);
+            }
+
+        }
+
+        @keyframes btm1e {
+            from {
+                width: 0em;
+            }
+
+            to {
+                width: 40em;
+                background-color: var(--background-color);
+            }
+
+        }
+
+        @keyframes btm1f {
+            from {
+                width: 0em;
+            }
+
+            to {
+                width: 27.5em;
+                background-color: var(--background-color);
+            }
+
+        }
+
+        .container6 {
+            border: 2px solid red;
+            width: 127em;
+            height: 45em;
+            display: flex;
+        }
+
+        .container6 .box4 {
+            border: 2px solid;
+            margin-left: 6em;
+            width: 24em;
+            margin-top: 5em;
+            height: 26em;
         }
     </style>
 </head>
@@ -439,7 +668,106 @@
         </section>
 
         <section class="container5">
-            this dwdde
+            <div class="box1">
+                <div class="boxes">
+                    <div class="head">
+                        <h4>HTML <span id="spanhead1">100%</span> </h4>
+                    </div>
+                    <div class="bottom">
+                        <div class="btm1">
+                            <!-- 1234 -->
+                        </div>
+                        <div class="btm2" id="btm1a">
+                            <!-- 1234 -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="head">
+                        <h4>PHP <span id="spanhead2">90%</span></h4>
+                    </div>
+                    <div class="bottom">
+                        <div class="btm1">
+                            <!-- 1234 -->
+                        </div>
+                        <div class="btm2" id="btm1b">
+                            <!-- 1234 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="boxes">
+                    <div class="head">
+                        <h4>CSS <span id="spanhead3">70%</span></h4>
+                    </div>
+                    <div class="bottom">
+                        <div class="btm1">
+                            <!-- 1234 -->
+                        </div>
+                        <div class="btm2" id="btm1c">
+                            <!-- 1234 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="head">
+                        <h4>JAVASCRIPT <span id="spanhead4">70%</span></h4>
+                    </div>
+                    <div class="bottom">
+                        <div class="btm1">
+                            <!-- 1234 -->
+                        </div>
+                        <div class="btm2" id="btm1d">
+                            <!-- 1234 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="boxes">
+                    <div class="head">
+                        <h4>PHOTOSHOP <span id="spanhead5">80%</span></h4>
+                    </div>
+                    <div class="bottom">
+                        <div class="btm1">
+                            <!-- 1234 -->
+                        </div>
+                        <div class="btm2" id="btm1e">
+                            <!-- 1234 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="head">
+                        <h4>WORDPRESS <span id="spanhead6">55%</span></h4>
+                    </div>
+                    <div class="bottom">
+                        <div class="btm1">
+                            <!-- 1234 -->
+                        </div>
+                        <div class="btm2" id="btm1f">
+                            <!-- 1234 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container6">
+            <div class="box4">
+                1234
+            </div>
+            <div class="box4">
+                123
+            </div>
+            <div class="box4">
+                1234
+            </div>
+            <div class="box4">
+                1234
+            </div>
         </section>
 
 

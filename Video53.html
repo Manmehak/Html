@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JavaScript</title>
+</head>
+
+<body>
+    this is Eve
+    <script>
+        let name0 = "Manmehak";
+        let name1 = "Partap";
+        let name2 = "Singh";
+        let name3 = "Goraya";
+
+        // This is a long way to go so 
+
+        // console.log(name + " Is a Good Boy");
+        // console.log(name1 + " Is a Good Boy");
+        // console.log(name2 + " Is a Good Boy");
+        // console.log(name3 + " Is a Good Boy");
+
+        // So by making a function 
+        // This is the fast way to do it 
+        function greet(name, greetText = "Greetings From JavaScript") { //Here greettext is the default value of greettext isnt called
+            console.log(greetText + " " +  name + " Is a Good Boy");
+        }
+        greetText = "Hello";
+
+        greet(name0);
+        greet(name1,greetText);
+        greet(name2);
+        greet(name3 ,greetText);
+        // Here where greettext is aked it provided the value 
+        // where gt is not asked there is default value given to it 
+
+
+
+    </script>
+</body>
+
+</html>

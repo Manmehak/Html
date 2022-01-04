@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* grid-template-columns: 1fr; for automatic column adjust */
+            grid-template-rows: 1fr 1fr 1fr; /*for specific rows*/
+            /* grid-auto-rows: 2fr;   for automatic row adjust */
+            grid-gap: 1em;
+
+        }
+        .box{
+            border: 2px solid red;
+            padding: 10px;
+            background-color: khaki;
+        }
+        /* Spanning in grid meaning mergin in grid */
+        .box:first-child{  /* psuedo selctor*/
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+
+            /* shortcut */
+            grid-column: 1 /span 2;
+        }
+
+        .box:nth-child(4){
+            grid-row-start: 2;
+            grid-row-end: 4;
+            /* Shortcut  */
+            /* grid-row: 1 /span 3; */
+        }
+
+
+
+    </style>
+</head>
+<body>      
+    <div class="container">
+        <div class="box">Item1</div>
+        <div class="box">Item2</div>
+        <div class="box">Item3</div>
+        <div class="box">Item4</div>
+        <div class="box">Item5</div>
+        <div class="box">Item6</div>
+        <div class="box">Item7</div>
+        <div class="box">Item8</div>
+        <div class="box">Item9</div>
+        <div class="box">Item10</div>
+    </div>
+</body>
+</html>

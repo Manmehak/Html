@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minmax and Autofit</title>
+    <style>
+        .container{
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-gap: 1em;
+            /* autofit and minmax are the properties making th grid responsive in all devices acc to their screen size */
+            grid-template-columns: repeat(auto-fit,minmax(200px,600px));
+            /* minmax(a,b) : a is the inmum length that can be showed and b is the maximum length a gri would have  */
+
+        }
+
+        .box{
+            background-color: khaki;
+            border: 2px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item1</div>
+        <div class="box">Item2</div>
+        <div class="box">Item3</div>
+        <div class="box">Item4</div>
+        <div class="box">Item5</div>
+        <div class="box">Item6</div>
+        <div class="box">Item7</div>
+        <div class="box">Item8</div>
+        <div class="box">Item9</div>
+        <div class="box">Item10</div>
+    </div>
+</body>
+</html>

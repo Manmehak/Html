@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and Conditionals</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+            <li>Item4</li>
+            <li>Item5</li>
+        </ul>
+    </div>
+    <script>
+        // var string1 = "String1";
+        // var string1 = "String2";
+        // console.log(string1);
+
+        // Instead of var we will use let from now on 
+        // let helps in redeclaring the saame variable if variable is prsent in any other block 
+        // But var doesnot do it once varis declared in any block means localy or globally you cannot use it again
+        // Scope
+        // let a = 36;
+        // console.log(a);
+        // {
+        //     let b = 67;
+        //     console.log(b);
+        // }
+        // b cannot be called from outside this block 
+
+        // Constant 
+        // const i = "This cannot be changed";
+        // i = "I want to chnage this"; this will throw error as constant cannot be changed
+        // console.log(i);
+
+
+        // Conditonals
+        // let age = 20;
+        // if(age>18){
+        //     console.log("U can Drink Cold Drink");
+        // }
+        // else if(age==18){
+        //     console.log("Its lucky for you .. U can drink Cold Drink");
+        // }
+        // else{
+        //     console.log("u Can drink Water");
+        // }
+
+        // Switch 
+        const cups = 45;
+        switch (cups) {
+            case 4:
+                console.log("The value of is 4");
+                break;
+            
+            case 41:
+            console.log("The value of is 41");
+            break;
+
+            case 42:
+            console.log("The value of is 42");
+            break;
+
+            case 44:
+            console.log("The value of is 44");
+            break;
+
+            case 45:
+            console.log("The value of is 45");
+            break;
+        
+            default:
+                console.log("No value of Cups");
+                break;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

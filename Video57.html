@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Events</title>
+    <style>
+        button{
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Browser Events 
+    1. click 
+    2. contextmenu when right click on mouse 
+    3. mouseover/ mouseout  when cursor in or out of content
+    4 mousedown / mouseup when mouse btn pressed or taken up
+
+    form events 
+    1. submit
+    2. focus .. focus on input tag
+    3. transition .. css transition 
+    4. DOMContentLoaded to load DOM means HTML
+    -->
+
+    <div class="container">
+        <h1>Heading1</h1>
+        <p id="para">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam commodi amet accusantium iste. Nemo, modi.
+            Porro doloremque adipisci minima animi ratione quam tempore reprehenderit sapiente numquam cupiditate nihil,
+            veritatis voluptatibus quidem mollitia atque iste eaque delectus odit sunt? Totam, doloribus. Assumenda modi
+            officia sed, molestias, optio eveniet repudiandae a, voluptatum facilis porro vitae. Ea qui autem non
+            incidunt maiores est eos amet. Ex architecto est assumenda eum dolore? Modi provident tempore veritatis a
+            rerum esse maxime magnam non expedita aliquid ducimus cupiditate perspiciatis nam, quod delectus, commodi,
+            dolorum ab. Adipisci non earum asperiores voluptatibus dolores facere nam illum laudantium deleniti beatae.
+            Corporis quidem neque eveniet odio, maxime officia veniam reprehenderit eius sint consequuntur quaerat
+            aliquid veritatis dolore. Magni similique pariatur rerum voluptatum ab suscipit aperiam, odit ipsa, sapiente
+            temporibus earum eveniet? Magnam asperiores odit laudantium culpa beatae nihil, quas quibusdam excepturi in
+            odio voluptates consequuntur optio. Et fugit numquam dolore praesentium, eligendi iusto magni id repellendus
+            sapiente at ipsam aut aliquid ipsum harum officia quisquam nobis neque quae quia velit, eaque earum
+            molestias soluta. Error harum sed maiores eos nisi. Aut, laboriosam assumenda sed neque voluptatem
+            repellendus dolor dicta, placeat maiores mollitia optio odio, eaque ad rerum. Doloribus, quisquam similique!
+        </p>
+    </div>
+
+    <!-- uncomment it to property use the program -->
+
+    <!-- <button id="btn" onclick="toggleHide()">ShowHide</button>
+    <button id="btn2" onclick="click1()">ShowHide</button> -->
+    <button>Namaste</button>
+
+    <script>
+        // One way to add funtion to an event 
+        let para1 = document.getElementById('para');
+        para1.addEventListener('mouseover',function mouse(){
+            console.log('Mouse Inside');
+        });
+        para1.addEventListener('mouseout',function mouse1(){
+            console.log("Mouse Out");
+        });
+
+        // another way of doing it 
+        function toggleHide(){
+            let btn1 = document.getElementById('btn');
+            let para1 = document.getElementById('para');
+            
+            if(para1.style.display!='none'){
+                para1.style.display= 'none';
+            }
+            else{
+                para1.style.display='block';
+            } 
+        }
+        
+        function click1(){
+            let btn2 = document.getElementById('btn2');
+            btn2.innerHTML="New Button";
+            
+        }
+ 
+        // Another way of adding function to event listener 
+        let namaste = document.querySelector('button');
+        namaste.addEventListener('click', showMsg);
+
+        function showMsg(){
+            alert("Namaste World");
+            let name = prompt("Write Your Name : " );
+            namaste.textContent="Hello "+ name;
+        }
+    </script>
+</body>
+
+</html>

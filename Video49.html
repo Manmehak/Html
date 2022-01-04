@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String & String Methods</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Lorem ipsum dolor sit.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, adipisci sapiente vitae cum porro corporis maiores a distinctio, inventore eaque obcaecati quidem voluptatum ut quisquam omnis nemo, minus iste nesciunt quaerat? Fuga, repellendus sapiente?</p>
+    </div>
+
+    <script>
+        var string = "this"; //it can be made using single commas 
+        var name = 'Mehak'
+        var atts = 'Good Boy'
+        console.log(string + name + atts);
+        //Template literal
+        var temp = `${name} is a 'nice' "person" and has atts ${atts}`;  // text formatting 
+        console.log(temp);
+        //to get length
+        var len = name.length;
+        console.log(`Length of name is ${len}`);
+
+        //Escape characters Ex: \t \n \\
+        console.log("Hello \nWorld ")
+
+        // creating string using Constructor 
+        var y = new String("This");
+        console.log(y);
+    </script>
+</body>
+</html>

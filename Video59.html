@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date $ Time </title>
+</head>
+<body>
+    <div class="container">
+        
+        <span id="time1"></span>
+    </div>
+    <script>
+        let now1 = new Date();
+        console.log(now1);
+        // we wanta simple date 
+
+        // 2nd way to initailise date
+        let newDate = new Date("2029-09-20");
+        console.log(newDate);
+
+        // we can give our own date time and seconds to it 
+        // let now2 = new Date(year,month,date,hours ,minutes,seconds,milliseconds);
+
+
+        // to get day 
+        let now3 = new Date();
+        console.log("Today is Day: " + now3.getDay());
+        console.log("Today is Month: " + now3.getMonth());
+        console.log("Today is Date: " + now3.getDate());
+        console.log("Today is Time: " + now3.getTime());
+        // get time wll tell the ms past from the refernce date take by the editor we can get that by also using Date.now()
+
+        function time1(){
+            time1 = document.getElementById('time1');
+            time1.innerHTML= new Date();
+        }
+        setInterval(time1,1000)
+    </script>
+</body>
+</html>

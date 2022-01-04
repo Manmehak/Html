@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval & setTimeOut cleartimeout</title>
+</head>
+<body>
+    <div class="container">
+        Time Now is <span id="time"></span>
+    </div>
+    <script>
+        // when we want a function to runafter some time or get repeatedly 
+        // setTimeout allows to run function once after interval of time
+        // setInterval allows to run function repeatedly after interval of time 
+
+
+        function greet(name){
+            console.log("Good Morning! " + name);
+        }
+        // setTimeout(() => {
+            
+        // }, timeout);
+        // syntax
+        // or
+        // setTimeout(functionName, timeout); time is in ms
+        setTimeout(greet, 5000 , "Manmehak"); 
+        // can give name inside function but can also give parameter as an third argument in the settimeout
+
+        // if wanna clear the set timeout function and not to use it anymore or i say before it runs and u changed your mind we can use clearTimeout by giving id of settimeout and it will stop it then
+
+        let setTime = setTimeout(greet, 5000);
+        console.log(setTime);
+        clearTimeout(setTime);
+        // this console will give the id of the  set time out and we can use it to stop it 
+        
+        intervalId = setInterval(greet,2000);
+        clearInterval(intervalId);
+        // it will repeat after every 2s
+        // and same with it we can stop it by clearInterval
+        // setInterval will privide the id and then if we rn it in clearInterval so it will stop it 
+
+        // application - to display time 
+        function displayTime(){
+            time = new Date();
+            console.log(time);
+            let time1 = document.getElementById('time');
+            time1.innerHTML= time;
+        }
+        setInterval(displayTime,1000);
+
+    </script>
+</body>
+</html>
