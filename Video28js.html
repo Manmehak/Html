@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 28 Javascript Object Prototype </title>
+</head>
+<body>
+    <script>
+        // object literal 
+
+        let  obj = {
+            name: "Manmehak",
+            age: 20,
+            address: "Qadian, Gudaspur",
+        }
+
+        // proto - means where we begin to create 
+        // object literal : to begin from object.prototype and there are certain methods in it which are predefined which we can use .. 
+        // means when we created object literal there are some object prototype predefined 
+        console.log(obj);
+
+        // adding something to prototype
+        function Obj(name){
+            this.name = name;
+        }
+
+        Obj.prototype.getName = function(){
+            return this.name;
+        }
+        
+        let obj2 = new Obj("Manmehak");
+        console.log(obj2);
+
+        // i cannot change the prototype of the created object but only can change the prototype of the constructor
+
+        
+
+    </script>
+</body>
+</html>

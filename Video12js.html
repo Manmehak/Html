@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dom Manipulation</title>
+</head>
+<body>
+    <div class="container">
+        This is the JavScript tutorial.
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+        <a href="#">Link4</a>
+        <a href="#">Link5</a>
+    </div>
+    <script>
+
+        let a= document.all;
+        console.log(a);
+
+        // here we can get all the tags inside this html page but this is not an array so to get that we will make it array
+        // for ex : 
+        // a.forEach(function(element){
+        //     console.log(element);
+        //     // this will give error as a is not array sp foreach won't work here
+        // })
+
+        // so maki this array using from
+        Array.from(a).forEach(function(element){
+            console.log(element);
+        })
+
+        // to get links from the page 
+        let link = document.links;
+        console.log(link[0]);
+        console.log(link[0].href);
+
+
+        // Quiz use document.imae
+        let b = document.scripts;
+        for(let script1 of Array.from(b)){
+            console.log(script1);
+        }
+
+
+    </script>
+</body>
+</html>

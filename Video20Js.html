@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video20</title>
+</head>
+<body>
+    <div class="container">
+        Local and Session Storage 
+    </div>
+
+    <script>
+        // localStorageis storage associated to browser by us .. it does not get deleted even if we close the browser while session storage values gets deleted if we close the browser
+        
+        // how to implement 
+
+        localStorage.setItem('Name1' , "Manmehak");
+        localStorage.setItem('Name2' , "Partap");
+        localStorage.setItem('Name3' , "Singh");
+
+        // how to add array to local storage 
+        let names = ["Manmehak ", "Partap ", "Singh"];
+        localStorage.setItem('ListOfNames', JSON.stringify(names));
+        // if simply write the name it will store array as string so we will use JSON to store it as array 
+        // and to access it again parse back the string to array 
+        console.log(JSON.parse(localStorage.getItem('ListOfNames')));
+
+        // to remove 
+        localStorage.removeItem('Name2');
+        // get item 
+        localStorage.getItem('Name1');
+        
+        // to clear fully local storage 
+        // localStorage.clear();
+        
+        // same with seesion storage 
+        
+        sessionStorage.setItem('Name1' , 'Manmehak');
+        sessionStorage.setItem('Name2' , 'Partap');
+        sessionStorage.setItem('Name3' , 'Singh');
+        
+        sessionStorage.removeItem('Name1');
+        sessionStorage.getItem('Name1');
+        // sessionStorage.clear();
+    </script>
+</body>
+</html>

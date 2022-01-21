@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>JS DOM paragraph style</title>
+    <!-- <style>
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style> -->
+</head>
+
+<body>
+    <p id='text'>JavaScript Exercises - w3resource</p>
+    <div>
+        <button id="jsstyle">Style</button>
+    </div>
+    <!-- To change style of btn when clicked  -->
+    <script>
+        let btn1 = document.getElementById('jsstyle');
+        btn1.addEventListener('click' , changeStyle);
+
+        function changeStyle(){
+            let text1 = document.getElementById('text');
+            text1.style.fontFamily = "Segoe UI, Tahoma, Geneva, Verdana, sans-serif";
+            text1.style.fontSize = "40pt";
+            text1.style.color = "gray";
+        }
+    </script>
+</body>
+
+
+</html>

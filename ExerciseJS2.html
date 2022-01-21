@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2</title>
+    <style>
+        .div{
+            width: 300px;
+            height: 100px;
+            border: 2px solid black ;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            This is the Exercise 2..
+        </h1>
+        
+    </div>
+
+    <script>
+        
+        let createDiv = document.createElement('div');
+        createDiv.className = 'div';
+        createDiv.id = 'divId';
+        createDiv.innerText = "This is the div "; 
+        
+        let cont = document.querySelector('.container');
+        cont.appendChild(createDiv);
+
+
+        let editText = document.getElementById('divId');
+        editText.addEventListener('dblclick', function edit(){
+            let html = divId.innerText;
+            editText.innerHTML = `<textarea class="form-control" id= "input"> ${html}</textarea>`;
+            // as a default value to be printed inside input so we added html in it 
+            
+            
+            let newText = document.getElementById('input');
+            // we are working on input area of div 
+            newText.addEventListener('blur', function add(){
+                divId.innerHTML = newText.value; // text inside input area 
+                sessionStorage.setItem('Key' , divId.innerHTML);
+            });
+        });
+
+
+    </script>
+</body>
+</html>

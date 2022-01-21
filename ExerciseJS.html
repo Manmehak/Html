@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execise1</title>
+</head>
+<body>
+    This is exercise
+    <a href="#">This</a>
+    <a href="#">This</a>
+    <a href="#">Thrfer</a>
+    <a href="#">r5tr</a>
+    <a href="#">This</a>
+    <a href="#">This</a>
+    <a href="http://this.com"></a>
+    <script>
+
+        
+        // Fetch all the links from the html that contains this text 
+        // this example is of this in text in the lnk 
+        let a = document.links;
+
+        for (let index=0; index<Array.from(a).length;index++){
+        if(a[index].textContent == 'This'){
+            console.log(a[index]);
+        }
+        else{
+            continue;
+        }
+    }
+
+    let str = "this";
+    // links contains this 
+    // this example is of this in the url
+    for (let index1=0; index1<Array.from(a).length;index1++){
+        if(a[index1].href.includes(str)){
+            console.log(a[index1]);
+        }
+        else{
+            continue;
+        }
+    }
+
+
+    </script>
+</body>
+</html>

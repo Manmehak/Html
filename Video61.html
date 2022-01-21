@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+<body>
+    <div class="container">
+        This is Math Object. 
+    </div>
+    <script>
+        // Priniting math object 
+        let m = Math;
+        console.log(m);
+
+        // printing math different values
+        console.log("The value of pi is : " + Math.PI);
+        console.log("The value of E is : " + Math.E);
+        console.log("The value of LOG10E is : " + Math.LOG10E);
+        console.log("The value of LN10 is : " + Math.LN10);
+
+        let a1 = 34.5677;
+        let b1 = 45.6;
+        console.log("The value of round figure of a and b: " , Math.round(a1), Math.round(b1));
+
+        console.log("The value of 2 power 3 is : " ,Math.pow(2,3));
+        console.log("The sqrt of 36 is : " , Math.sqrt(36));
+        console.log("The sqrt of 50 is : " , Math.sqrt(50));
+        console.log("The sqrt of 64 is : " , Math.sqrt(64));
+        
+        //Floor and ceil 
+        console.log("5.8 rounded to up : ", Math.ceil(5.8));
+        console.log("5.6 rounded to down : ", Math.floor(5.6));
+
+        // Abs function 
+        console.log("the absolute value of -5.6 is : " , Math.abs(-5.66));
+        console.log("the absolute value of 5.6 is : " , Math.abs(5.66));
+
+        // sin cos 
+        console.log("The value of sin(pi) is : " , Math.sin(Math.PI/2));
+
+        // Min max 
+        console.log("Minimum value of 4,5,6 is : " ,Math.min(4,5,6));
+        console.log("Maximum value of 4,5,6 is : " ,Math.max(4,5,6));
+
+        // generate random number 
+        console.log("Generating random Number: " , Math.random());
+        // it will generate btween 0 & 1
+        // to generate ahead of it
+        // random number between a and b 
+
+        let a = 1;
+        let b = 100;
+        let random1 = a + (b-a)*Math.random(); // Formula 
+        console.log("Generate ahed number : ", random1);
+        console.log("Rounding Number : ", Math.round(random1));
+
+
+    </script>
+</body>
+</html>

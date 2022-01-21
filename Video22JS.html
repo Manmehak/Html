@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with fully js </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 10px;
+        }
+
+        .container {
+            display: flex;
+            /* border: 2px solid black; */
+            background: black;
+        }
+
+        .head1 {
+            /* border: 2px solid red; */
+            display: flex;
+        }
+
+        .logo {
+            width: 16em;
+            border: 2px solid;
+            margin: 6px;
+        }
+
+        .logo p {
+            font-size: 2.3em;
+            color: white;
+        }
+
+        .nav {
+            border: 2px solid;
+            width: 30em
+        }
+
+        .nav nav {
+            margin-top: 9px;
+
+        }
+
+        .nav nav a {
+            padding-left: 15px;
+            font-size: 1.8em;
+            text-decoration: none;
+            color: white;
+        }
+
+        .head2 {
+            position: absolute;
+            right: 2em;
+            display: flex;
+            top: .6em;
+        }
+
+        .input input {
+            height: 2.6em;
+            margin-right: 0.1em;
+            padding-left: 7px
+        }
+
+        .btn button {
+            height: 2em;
+            width: 5em;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .main {
+            width: 80em;
+            margin: auto;
+        }
+
+        .container2 {
+            width: 80em;
+            height: 18em;
+            /* border: 2px solid red; */
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .container2head {
+            margin: 5px;
+            margin-bottom: 5px;
+        }
+
+        .container2head h1 {
+            font-size: 2.3em;
+            font-family: system-ui;
+        }
+
+        .container2box1 {
+            border: 1px solid black;
+            border-radius: 2px;
+            width: 79em;
+            margin: auto;
+        }
+
+        .box1Head p {
+            font-size: 1.4em;
+            padding: 4px;
+        }
+
+        .box1Main textarea {
+            width: 52em;
+            margin-left: 4px;
+            height: 4.5em;
+            font-size: 1.5em;
+        }
+
+        .box1Foot button {
+            height: 2.2em;
+            width: 7em;
+            font-size: 1.3em;
+            margin: 4px;
+        }
+
+        .container3 .container3Head h1 {
+            font-size: 2em;
+            font-family: system-ui;
+            margin: 3px;
+        }
+
+        .container4 {
+            /* border: 2px solid; */
+            display: flex;
+        }
+
+        .container4Box1 {
+            display: none;
+            width: 23em;
+            border: 2px solid;
+            margin: 10px;
+        }
+
+        .container4Head h1 {
+            font-size: 1.5em;
+            font-family: system-ui;
+            margin-left: 5px;
+        }
+
+        .container4Foot button {
+            border-radius: 2px;
+            border: 1px solid #0d4ddd;
+            width: 6em;
+            font-size: 1.3em;
+            margin-left: 5px;
+            margin-top: 2px;
+            margin-bottom: 6px;
+            color: white;
+            background: #0d4ddd;
+        }
+
+        .container4Main p {
+            height: auto;
+            max-width: 21em;
+            margin-left: 5px;
+            margin-top: 5px;
+            font-size: 1.2em;
+            font-family: system-ui;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head1">
+            <div class="logo">
+                <p>Magic Notes</p>
+            </div>
+            <div class="nav">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Notes</a>
+                    <a href="#">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+        <div class="head2">
+            <div class="input">
+                <input type="text" placeholder="Search Notes">
+            </div>
+            <div class="btn">
+                <Button id="btn">Search</Button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main">
+
+
+        <div class="container2">
+            <div class="container2head">
+                <h1>Welcome To Magic Notes</h1>
+            </div>
+            <div class="container2box1">
+                <div class="box1Head">
+                    <p>Add a Note</p>
+                </div>
+                <div class="box1Main">
+                    <textarea name="Add a Note" id="note" cols="30" rows="10" placeholder="Add a Note"></textarea>
+                </div>
+
+                <div class="box1Foot">
+                    <button id="box1Foot">Add Note</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container3">
+            <hr>
+            <div class="container3Head">
+                <h1>Your Notes </h1>
+            </div>
+            <hr>
+
+        </div>
+
+        <div class="container4">
+
+            <div class="container4Box1"
+            id="container4Box1">
+
+                <div class="container4Head">
+                    <h1 id="insertNoteH1">Note 1</h1>
+                </div>
+                <div class="container4Main">
+                    <p id="inputNote"></p>
+                </div>
+                <div class="container4Foot">
+                    <button id="button4">Delete Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+
+        let addNoteBtn = document.getElementById('box1Foot');
+        addNoteBtn.addEventListener('click', addNote);
+        function addNote() {
+            let note = document.getElementById('note');
+            let addNodeText = note.value;
+
+            let para = document.getElementById('inputNote');
+            para.innerText = addNodeText;
+
+            let container = document.getElementById('container4Box1')
+            container.style.display = 'block';
+            alert("Note Added.. ");
+            
+           
+        }
+ 
+        let deleteNoteBtn = document.getElementById('button4');
+        deleteNoteBtn.addEventListener('click' ,deleteNote);
+        
+        function deleteNote(){
+            let para = document.getElementById('inputNote');
+            para.innerText = null;
+            let container = document.getElementById('container4Box1')
+            
+            container.style.display = 'none';
+            alert("Note Deleted.. ");
+        }
+        
+        count = 0;
+        addNoteBtn.onclick = function () {
+            count = count + 1;
+            console.log(count);
+        }
+
+        
+
+
+    </script>
+</body>
+
+</html>

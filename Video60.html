@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrows Functions In JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        This is arrow function 
+        <!-- Arrow function is a shortcut  -->
+    </div>
+    <script>
+        function greet(){
+            console.log("Good Morning");
+        }
+        greet();
+        
+        // Shortcut way of writing it 
+        let greet1 = () =>{
+            console.log("Good Morning");
+        }
+        greet1();
+
+        // this does the work without making a function 
+        // this works in settimeout setinterval type function we we straightly can write the statements of function without making a function 
+        setTimeout(() => {
+            console.log("Inside TimeOut ")
+        }, 3000);
+        // this will work directly after 3 seconds of running it 
+        
+        // Another Example 
+        let sum = (a,b) => {
+            return a+b;
+        };
+        console.log( sum(34,5));
+        
+        // to write it simply 
+        let sum2 = (a,b) => a+b;
+
+        // for single parameter
+        let half = a => a/2;
+
+        // arrow function in for each loop 
+        let obj1 = {
+            greeting : "Good Morning",
+            names : ["Manmehak " , "Partap " , "Singh"],
+            speak(){
+                // this is for object
+                // function name already given so we just give the parameter in it 
+                this.names.forEach((student) => {
+                    console.log(this.greeting + " Hello " + student);
+                    // arrow function uses this and make call to the this inside the parent function also called as lexical this 
+                    // if we use function instead of simple function then this keyword will not make a call to the parent greeting  it will search for this inside the child function and yit will show undefined value 
+                });
+            }
+        }
+        obj1.speak();
+
+
+    </script>
+</body>
+</html>

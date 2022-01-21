@@ -51,7 +51,12 @@
         console.log(strWhiteSpaces.trim());
 
         // extract characters from string
-        var char = str.charAt(2);
+        var char = str.charAt(str.length-1);
+        var char1 = str.charAt(0);
+        var char2 = char1 + char;
+        console.log(char2);
+
+
         console.log(char);
         // CharCodeAt give the code of the character 
         char = str.charCodeAt(2);

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video14</title>
+</head>
+<body>
+    <div class="container">
+        This is the container 
+    </div>
+    <script>
+        // Quick quiz to create heading element with text as "Go to codewithharry" and create an a tag outside it with href ="https://codewithharry.com"
+
+        let createHead = document.createElement('h1');
+        createHead.className = "Heading";
+        createHead.id = 'Headinng';
+        createHead.innerText = "Go To CodeWithHarry";
+        console.log(createHead)
+
+        let createTag = document.createElement('a');
+        createTag.href = "https://codewithharry.com"
+        createTag.setAttribute('target' , '_blank');
+        createTag.appendChild(createHead);
+        console.log(createTag)
+
+        let insert = document.querySelector('.container');
+        insert.appendChild(createTag);
+
+
+        // to get all the child Nodes means all text all elements 
+        let a = document.childNodes;
+        console.log(a)
+
+        // to get only element childs
+
+        a = document.children;
+        console.log(a);
+
+        // this is known as traversing in javascript 
+        // now to enter in something we will enter through child nodes
+        console.log(createTag.firstChild)   // to get first node irrespective of text or element
+        console.log(createTag.firstElementChild) // to get first element node 
+        
+        // to go to second node
+        console.log(createTag.firstElementChild.nextElementSibling) // to get second element node 
+        console.log(createTag.firstElementChild.nextSibling) // to get second  node  
+        
+
+
+    </script>
+</body>
+</html>
