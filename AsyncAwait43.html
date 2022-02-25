@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await usiing with Fetch API</title>
+</head>
+
+<body>
+    <script>
+        console.log("This is Tutorial 43");
+
+        // simple function
+        function mehak(){
+            return "Manmehak";
+        }
+        console.log(mehak());
+
+        // adding async to it will make the function to return a promise  and will run the program asyncronously
+        async function mehak1(){
+            return "Manmehak";
+        }
+        console.log("Before running..")
+        console.log(mehak1());
+        console.log("After Running..");
+        
+        // as async made it return promise 
+        // now we can add a promise inside the mehak1 
+        
+        async function mehak1(){
+            const response = await fetch('https://api.github.com/users');
+            console.log("Before response");
+
+            const users = await response.json();
+            console.log("Data Came ");
+            return users;
+        }
+        console.log("Before running..")
+        // as mehak 1 will return a promise so what to do with it is given next
+        let a = mehak1();
+        console.log(a);
+        a.then(function (data){
+            console.log(data);
+        });
+        console.log("After Running..");
+
+    </script>
+</body>
+
+</html>

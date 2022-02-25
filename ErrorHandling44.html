@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+
+<body>
+    <script>
+        // console.log("This is tutorial 44");
+        // let a = " Manmehak";
+
+        // if (a != undefined) {
+        //     throw new Error("This is not undefined ");
+        // }
+        // else {
+        //     console.log("Text is undefined ");
+        // }
+
+        // try catch  
+        try {
+            let a = 0;
+            let b = 10;
+            let c = b/ a;
+            addsum(); //this is undefined so throws an error
+
+        } catch (error) {
+            console.log("Error!");
+            console.log(error);
+            console.log(error.name);
+            console.log(error.message);
+        } finally{   //whether eroor or not it will be run
+            console.log("Happi Birthday");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise in JavaScript</title>
+</head>
+<body>
+
+    <script>
+        function func1(){
+            // promise will either be resolved or be rejected 
+            return new Promise(function(resolve, reject){
+                // now suppose we are fetching some data from the server ..
+                // we made a promise than that we will fetch if we succeeded then it is resolved and now if its nt then it means rejected 
+                setTimeout(() => {
+                    const fetchData = false;
+                    if(!fetchData){
+                        console.log("Function: Your Promise has been resolved..");
+                        resolve();  //these are like callback functions..
+                    }
+                    else{
+                        console.log("Function: Your Promise has been rejected..");
+                        reject();
+                    }
+                }, 2000);
+            })
+        }   
+
+        // now what happens when we run the func1
+        // 2 possibilities: fetched or failed 
+        // what to do next
+        // then: for positive response to go 
+        // catch: for it your promise fails  
+        func1().then(function(){
+            console.log("Very Good bro: U kept your promise..");
+        }).catch(function(){
+            console.log("Very Bad bro: U didn't kept your promise..");
+        });
+
+        
+
+        // using promises in the previous callbenrollStudent(newStudent, getStudentsList);ack example ..
+        const students = [
+            {name:"Manmehak", subject:"JavaScript"},
+            {name:"Harry", subject: "Machine Learning"}
+        ]
+
+        function enrollStudent(student){
+            return new Promise(function(resolve, reject){
+                setTimeout(function() {   //set timeout is an method to do async. coding
+                    students.push(student);  //this is pushing new student to the list
+                    console.log("Student Added!");
+                    const error = true;
+                    if(!error){
+                        resolve(); //here getstudents will not work untill the push is done 
+                    }
+                    else{
+                        reject();
+                    }
+                    
+                }, 3000);
+            })
+        }
+
+        function getStudentsList(){
+            setTimeout(() => {
+                let str="";
+                //fetching array of objects
+                students.forEach(function(student){
+                    str+= `<li> ${student.name} : ${student.subject} </li>`  //student.name will display the name of the student in the list and same is for the subject
+                    console.log("Student Fetched!"); 
+                });
+                // Now the html is written now we will add it in dom
+                let list = document.getElementById("list");
+                list.innerHTML = str;
+            }, 1000);
+        }
+
+        let newStudent = {name:"Partap",subject:"Mathematics"}
+        enrollStudent(newStudent).then(getStudentsList).catch(function(){
+            console.log("Some error occured!");
+        })
+
+        // inside then is resolve function 
+        // inside catch is reject function 
+
+    </script>
+
+</body>
+</html>

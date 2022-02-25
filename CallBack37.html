@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Functions</title>
+</head>
+
+<body>
+
+    <h1>Student List</h1>
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        console.log("This is tutorial 37");
+        
+        //suppose we are fetching data from the server using xml http request 
+        const students = [
+            {name:"Manmehak", subject:"JavaScript"},
+            {name:"Harry", subject: "Machine Learning"}
+        ]
+
+        // callback functions are functons inside the other functions
+        // here we are adding fetched list to the dom using call back functions and using asynchronous methods
+
+        // student is an object
+        function enrollStudent(student, callback){
+            setTimeout(function() {   //set timeout is an method to do async. coding
+                students.push(student);  //this is pushing new student to the list
+                console.log("Student Added!");
+                callback();  //here getstudents will not work untill the push is done 
+            }, 3000);
+        }
+
+        // now here enroll student is taking time now if nw student is added it will not show the on the list so now we will make a callback function using enrollstudent
+
+        function getStudentsList(){
+            setTimeout(() => {
+                let str="";
+                //fetching array of objects
+                students.forEach(function(student){
+                    str+= `<li> ${student.name} : ${student.subject} </li>`  //student.name will display the name of the student in the list and same is for the subject
+                    console.log("Student Fetched!"); 
+                });
+                // Now the html is written now we will add it in dom
+                let list = document.getElementById("list");
+                list.innerHTML = str;
+            }, 1000);
+        }
+
+        // create a new student object 
+        let newStudent = {name:"Partap",subject:"Mathematics"}
+        // calling functions
+        // enrollStudent(newStudent);  //before using callback function
+        // getStudentsList();
+
+        // using callback function
+        enrollStudent(newStudent, getStudentsList); //this will again callback the enrollstudent func
+
+    </script>
+
+</body>
+
+</html>

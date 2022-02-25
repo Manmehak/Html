@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+    
+    <script>
+        console.log("This is Tutorial 30.")
+
+        const proto = {
+            slogan : function(){
+               return `This Company is the Best`;
+            },
+            changeName : function(newName){
+                this.name = newName;
+            }
+        }
+
+        const mehak = Object.create(proto);
+        mehak.name = "Manmehak";
+        mehak.role = "Programmer";
+        // we will use prototype function 
+        mehak.changeName("Partap");
+        mehak.slogan();
+        console.log(mehak);
+
+        // 2nd way 
+        const mehak1 = Object.create(proto,{
+            // to use changeName function in this we will write writable
+            name: {value: "Manmehak", writable:true},
+            role: {value: "BussinessMan"}
+        })
+        mehak1.changeName("Partap");
+        console.log(mehak1);
+
+        // now the main concept of prototype inheritance
+        function Employee(name, salary, experience){
+            this.name = name;
+            this.salary = salary;
+            this.experience = experience;
+        }
+
+        // adding slogan prototype to it 
+        Employee.prototype.slogan = function(){
+            return `This Company is the Best. Regards ${this.name}`;
+        }
+
+        let EmployeeObj = new Employee("Manmehak", 500000, 2);
+        console.log(EmployeeObj);
+
+        // for inheritance we create another constructor in which we will inherit 
+
+        function subEmployee(name, salary, experience, language){
+            // for inherit 
+            Employee.call(this,name,salary,experience);
+            this.language = language;
+        }
+
+        // Inherit the prototype we will 
+        subEmployee.prototype = Object.create(Employee.prototype);
+        // but this will not add the constructor in the prototyp of the subemployee
+        // so adding manually
+
+        subEmployee.prototype.constructor = Employee;
+        
+
+        let subEmployeeObj = new subEmployee("Partap", 600000, 5, "JavaScript");
+        console.log(subEmployeeObj);
+
+    </script>
+</body>
+</html>

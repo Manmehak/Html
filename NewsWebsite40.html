@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Shatabdi Express News</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Shatabdi Express</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" id="inputSearch" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-3">
+    <h3>Top News <span class="badge bg-secondary">by Shatabdi Express</span></h3>
+    <hr>
+    <div class="accordion" id="newsAccordion">
+
+    </div>
+
+  </div>
+
+
+
+  <script>
+    let newsAccordion = document.getElementById('newsAccordion');
+
+    // fetching data from the api using xhr object
+    let sources = 'bbc-news';
+    let apiKey = '5a2fe2999c7b4c2d992b056a855e4f49';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${sources}&apiKey=${apiKey}`, true);
+
+    xhr.onload = function () {
+      if (this.status == 200) {
+        let json = JSON.parse(this.responseText);
+        let articles = json.articles;
+        console.log(articles);
+        let news1 = '';
+
+        articles.forEach(function (element, index) {
+          console.log(index);
+          let news = ` <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-heading${index}">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse${index}" aria-expanded="true" aria-controls="panelsStayOpen-collapse${index}">
+                            ${element['title']} 
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapse${index}" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-heading${index}">
+                          <div class="accordion-body">
+                            ${element['description']}
+
+                            <a href = "${element['url']}" target="_blank"> Read More Here </a>
+                          </div>
+                        </div>
+                      </div>`
+          news1 += news;
+
+        });
+        newsAccordion.innerHTML = news1;
+      }
+      else {
+        console.log("Some error Occured");
+      }
+    }
+    xhr.send();
+
+    let inputSearch = document.getElementById('inputSearch');
+    inputSearch.addEventListener('input' , search);
+
+    function search(){
+      let inputValue = inputSearch.value.toLowerCase(); 
+      console.log(inputValue)
+      let accordionItems = document.getElementsByClassName('accordion-item');
+      Array.from(accordionItems).forEach(function(element){
+        
+        let cardTxt = element.getElementsByTagName("button")[0].innerText;
+        console.log(cardTxt);
+        if(cardTxt.includes(inputValue)){
+            element.style.display = "block";
+        }
+        else{
+            element.style.display = "none";
+        }
+    })
+    }
+    
+
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

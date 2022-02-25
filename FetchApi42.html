@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+</head>
+
+<body>
+    <!-- Fetch is another way like xhr object getting the response data from the server  -->
+    <!-- Fetch uses to then means two promises  -->
+    <div id="content">
+        <button id="fetchData">Fetch Data </button>
+        <button id="postData">Post Data </button>
+        <div id="content1"></div>
+    </div>
+
+    <script>
+        console.log("This is Fetch Api Tutorial");
+
+
+
+
+
+        // function getData() {
+        //     // startiing to use fetch api
+
+        //     let url = 'Video9.html';
+        //     fetch(url).then(function (response) { //first then
+        //         return response.text();  // if we do response .json it will parse the data but text will print it like it is 
+        //     }).then((data)=> console.log(data) )   
+        // }
+
+        // console.log("Before running getData");
+        // getData();  //this will fetch all the data from the file 
+        // console.log("After running getData") ; 
+
+
+        //Now to get data from the server 
+
+        let fetchData = document.getElementById('fetchData');
+        fetchData.addEventListener('click', getData);
+
+        let url = 'https://api.github.com/users';
+
+        function getData() {
+
+            fetch(url).then((response) => {
+                return response.json();  //this returned all data in object mode 
+                
+            }).then((data) => {
+                console.log(data);
+
+                // trying to put data in the screen 
+                // let content1 = document.getElementById('content1');
+                // let str = '';
+                // str += `<li> ${data["login"]} </li>`;
+                // content1.innerHTML = str;
+            })
+
+        }
+        
+
+
+        // Post data through fetch Api 
+        // function postData(){
+        //     url = 'http://dummy.restapiexample.com/api/v1/create';
+        //     data = '{"name":"test123","salary":"123","age":"23"}'
+        //     params = {
+        //         method: 'post',
+        //         headers : {
+        //             'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+        //         },
+        //         body: JSON.stringify(data),  // to parse object into string 
+        //     }
+        //     fetch(url, params).then(function(response){
+        //         return response.json();
+        //     }).then( function(data){
+        //         console.log(data);
+        //     })
+        // }
+        // postData();
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

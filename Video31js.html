@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes and Inheritance </title>
+</head>
+<body>
+
+    <script>
+        class Employee{
+            constructor(name, experience , division){
+                this.name = name;
+                this.experience = experience;
+                this.division = division;
+            }
+            slogan(){
+                return `I am ${this.name} and this company is the best..`;
+            }
+
+            joiningYear(){
+                return `2021-${this.experience}`;
+            }
+            //declaring static method which can be called without calling the object 
+            static add(a,b){
+                return a+b;
+            }
+        }
+
+        let employee1 = new Employee("Manmehak", 20 , "Programming ");
+        console.log(employee1);
+
+        class SubEmployee extends Employee{
+            constructor(name,experience ,division, language){
+                super(name, experience, division);
+                this.language = language.toLowerCase();
+            }
+
+            favoriteLanguage(){
+                if(this.language=="javascript"){
+                    return `JavaScript`;
+                }
+                else{
+                    return `Other Language`;
+                }
+            }
+
+            static multiply(a,b){
+                return a*b;
+            }
+        }
+
+        let subEmployee1 = new SubEmployee("Partap" , 25 , "Civil Services" , "Java");
+        console.log(subEmployee1);
+
+        
+
+    </script>
+</body>
+</html>

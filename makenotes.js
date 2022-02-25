@@ -6,6 +6,7 @@ addBtn.addEventListener('click', createNote);
 
 function createNote(){
     let addTxt = document.getElementById('addTxt');
+    let addTitle = document.getElementById('addTitle');
     // check if there are already notes in the localstorage or not 
     let notes = localStorage.getItem('notes');
 
@@ -17,8 +18,13 @@ function createNote(){
         notesObj = JSON.parse(notes);
     }
 
-    notesObj.push(addTxt.value);  //to push value of textarea in notesobj
+    let myObj = {
+        title : addTitle.value, // add new functionality to application 
+        text : addTxt.value,  //combining one space
+    }
+    notesObj.push(myObj);  //to push value of textarea in notesobj
     localStorage.setItem('notes', JSON.stringify(notesObj)); // adding value to local storage
+    addTitle.value='';
     addTxt.value=''; //after adding note making the textarea blank 
     
     // to show all the notes written in the application 
@@ -39,11 +45,12 @@ function showNotes(){
 
     // to get every element from the array so 
     notesObj.forEach(function(element , index){
+        // <h5 class="card-title">Note ${index+ 1}</h5>  add when u dont want title 
         html = html + 
-        `<div class="noteCard" style="width: 18rem;" >
+        `<div class="noteCard card" style="width: 18rem;" >
         <div class="card-body">
-          <h5 class="card-title">Note ${index+ 1}</h5>
-          <p class="card-text">${element}</p>
+          <h5 class="card-title">${element.title}</h5>
+          <p class="card-text">${element.text}</p>
           <button id= ${index} onclick="deleteBtn(this.id)" class="btn btn-primary my-2" id="addBtn">Delete Note</button>
         </div>
       </div>`
@@ -60,7 +67,7 @@ function showNotes(){
 }
 
 function deleteBtn(index){
-    console.log("This is Deleting "+ index)
+    // console.log("This is Deleting "+ index)
     let notes = localStorage.getItem('notes');
 
     if(notes==null){
