@@ -9,16 +9,13 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({
         video: {
             facingMode: {
-                exact: 'user'
+                exact: 'environment'
             }
         }
     }).then(function (stream) {
         //video.src = window.URL.createObjectURL(stream);
         video.srcObject = stream;
         video.play();
-
-
-
     });
 }
 
