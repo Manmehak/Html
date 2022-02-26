@@ -10,6 +10,11 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         //video.src = window.URL.createObjectURL(stream);
         video.srcObject = stream;
         video.play();
+        videoStream.getTracks().forEach((track) => {
+            track.stop()
+          })
+          
+          
     });
 }
 
