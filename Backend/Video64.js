@@ -32,7 +32,7 @@ const server = http.createServer((req, res) => {
     res.end(contact);
   }
   else{
-    res.statusCode=200;
+    res.statusCode=404;
     res.end("<h2>404 not found</h2>");
   }
 });

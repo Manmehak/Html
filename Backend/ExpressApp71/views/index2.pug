@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Using plain html in pug </title> -->
+    <!-- adding variable in this pug to send data in it  -->
+    <title>#{title}</title><!--this title is declared in the js file -->
+
+    <!-- how to link a cs file in the pug  -->
+    style
+        include ../static/index.css
+</head>
+<body>
+
+    <!--   
+    h1 This is heading. 
+    we are usingpug here so to write with its syntax we will add | and wew can use the tage by only type them no need of arrows 
+    <p>
+       | #{content}
+       | This is plain html in pug 
+    </p>-->
+
+    <!-- We are now making a form in the pug to know about how we can store the data entered by the uder in the storage -->
+
+    <div class="container1">
+        <nav>
+            <ul>
+                <li> <a href="#"> Home  </a></li>
+                <li> <a href="#"> About  </a></li>
+                <li> <a href="#"> Services  </a></li>
+                <li> <a href="#"> Contact  </a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container2">
+        <h2>Get Upto 60% Off on Gym Membership! Enroll Now..</h2>
+
+        <!-- creating form  -->
+        <form action="/" id="contact" method="post">
+
+            <div class="form">
+                <input type="text" name="name" id="name" placeholder="Enter Your Name">
+            <input type="number" name="age" id="age" placeholder="Enter Your Age">
+            <div class="gender">
+                
+                <label for="gender" id="gender">Gender</label>
+                <input type="radio" name="gender" > Male 
+                <input type="radio" name="gender" > Female 
+                
+            </div>
+            <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter Your Address"></textarea>
+            <textarea name="more" id="more" cols="30" rows="10" placeholder="Tell us More About Yourself"></textarea>
+            
+            <button id="btn">Submit</button>
+            
+        </form>
+        </div>
+
+    </div>
+</body>
+</html>

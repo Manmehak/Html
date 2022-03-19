@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Noto+Sans+Display:wght@100&family=Ubuntu:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#logo{
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 1rem;
+   
+}
+
+#logo img{
+    height: 42px;
+    filter: invert(1);
+    margin-right: 10px;
+}
+
+#navbar{
+    background-color: black;
+    padding: 13px 4px;
+}
+
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    margin: -3px 17px;
+    align-items: center;
+}
+
+
+#navbar li{
+    list-style: none;
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    font-size: 1.2rem;
+}
+
+#navbar li a:hover{
+    text-decoration: overline;
+    color: grey;
+    padding: 8px 25px;
+    font-size: 1.2rem;
+}
+
+#introSection{
+    height: 300px;
+    /* background-color: rgb(126, 121, 121); */
+    background: center/cover url("/static/Dancebackground.jpg") no-repeat ;
+    /* z-index: 5; */
+    height: 450px;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    padding-bottom: 40px;
+}
+
+.small{
+    font-size: 1.9rem;
+
+}
+
+#sponsorSection{
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.548);
+
+}
+
+#missonSection{
+    height: 300px;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+}
+
+#missonSection h3{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 6px;
+}
+
+#missonSection .card h3{
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 6px;
+}
+
+#missonSection .card{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 25%;
+    margin: 23px 20px;
+    height: 214px;
+    /* display: inline-block;  */
+}
+
+.cards{
+    margin-left: 10%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+#sponsorSection h3{
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 2px;
+    font-size: 2rem;
+}
+
+#sponsors{
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    margin: auto;
+}
+
+#sponsors img{
+    height: 120px;
+    width: 25%;
+    margin: 50px 51px;
+    border-radius: 10px;
+}
+
+
+#footer{
+    height: 50px;
+    background-color:black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.cardImg img{
+    height: 100px;
+    width: 40%;
+    margin: 5% 29%; 
+}
+
+.cardContent p{
+    max-width: 90%;
+    margin: auto;
+}

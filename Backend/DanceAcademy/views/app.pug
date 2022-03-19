@@ -1,0 +1,59 @@
+doctype html
+html
+  head 
+      title This is Title 
+      style
+          include ../static/style.css
+  body
+    nav#navbar
+        ul
+            div#logo
+                img(src='../static/logo.jpg')
+                | HDA
+            li #[a(href='/') Home]
+            li #[a(href='/') About]
+            li #[a(href='/') Services]
+            li #[a(href='/') Contact Us]
+
+    section#introSection 
+        div
+            | Welcome To Manmehak Dance Academy
+        div.small 
+            | Eat Dance Sleep Repeat
+
+    section#missonSection 
+        h3 Our Missons
+        div.cards
+            div.card
+                h3 Dance Perfection 
+                div.cardBox
+                    div.cardImg
+                        img(src="../static/dance1.png") 
+                    div.cardContent
+                        p This is the Best Dance Academy in the city..
+        
+            div.card
+                h3 Dance the way you like 
+                div.cardBox
+                    div.cardImg
+                        img(src="../static/dance2.png") 
+                    div.cardContent
+                        p This is the Best Dance Academy in the city..     
+        
+            div.card
+                h3 Expert Teaching 
+                div.cardBox
+                    div.cardImg
+                        img(src="../static/dance3.jpg")
+                    div.cardContent
+                        p This is the Best Dance Academy in the city..     
+    
+    section#sponsorSection 
+        h3 Our Sponsors
+        div#sponsors
+            img(src="../static/sponsor1.png", alt="Sponsor Image")
+            img(src="../static/sponsor2.jpg", alt="Sponsor Image")
+            img(src="../static/sponsor3.png", alt="Sponsor Image")
+ 
+  script
+    include ../static/script.js         
